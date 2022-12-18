@@ -5,7 +5,6 @@ const galleryList = document.querySelector(".gallery");
 const items = createGalleryItem(galleryItems);
 galleryList.insertAdjacentHTML("beforeend",items);
 
-galleryList.addEventListener("click", onGalleryListClick);
 
 
 function createGalleryItem(galleryItems) {
@@ -22,11 +21,9 @@ function createGalleryItem(galleryItems) {
 }
 
 
+var lightbox = new SimpleLightbox('.gallery a', { captionsData: "alt", captionDelay: 250 });
 
-function onGalleryListClick(evt) {
-    evt.preventDefault();
-    var lightbox = new SimpleLightbox('.gallery a', { captionsData: "alt", captionDelay: 250 });
-};        
+    
     
 
 
